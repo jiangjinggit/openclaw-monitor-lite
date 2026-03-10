@@ -1,5 +1,9 @@
 # OpenClaw Monitor Lite
 
+![Status](https://img.shields.io/badge/status-active-brightgreen)
+![Module](https://img.shields.io/badge/module-runtime%20%2F%20observability-blue)
+![License](https://img.shields.io/badge/license-MIT-black)
+
 A lightweight monitoring dashboard for OpenClaw builders and small teams.
 
 ## English
@@ -54,6 +58,16 @@ openclaw cron list --json
 openclaw sessions --all-agents --active 1440 --json
 ```
 
+### Screenshots / Demo
+> Add screenshots here later:
+- dashboard overview
+- cron snapshot view
+- sync status and error aggregation view
+
+### Related repositories
+- [openclaw-security-audit-lite](https://github.com/jiangjinggit/openclaw-security-audit-lite)
+- [openclaw-template-market](https://github.com/jiangjinggit/openclaw-template-market)
+
 ### Roadmap
 - Better cron error detail pages
 - Multi-environment support
@@ -101,6 +115,16 @@ npm start
 ```bash
 http://localhost:4311
 ```
+
+### 截图 / 演示区（占位）
+后续建议补三张图：
+- 总览页
+- 真实 cron 快照页
+- 同步状态与异常聚合页
+
+### 关联仓库
+- [openclaw-security-audit-lite](https://github.com/jiangjinggit/openclaw-security-audit-lite)
+- [openclaw-template-market](https://github.com/jiangjinggit/openclaw-template-market)
 
 ### 后续路线
 - 更好的异常详情页
