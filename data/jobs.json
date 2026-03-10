@@ -1,0 +1,6 @@
+[
+  {"id":"job-1","name":"hourly-business-ideation","kind":"cron","status":"success","lastRun":"2026-03-10 19:00 UTC","failures":0},
+  {"id":"job-2","name":"daily-summary","kind":"cron","status":"error","lastRun":"2026-03-10 18:30 UTC","failures":2},
+  {"id":"job-3","name":"feishu-sync","kind":"sync","status":"success","lastRun":"2026-03-10 17:58 UTC","failures":0},
+  {"id":"job-4","name":"telegram-reply","kind":"messaging","status":"success","lastRun":"2026-03-10 18:15 UTC","failures":0}
+]

@@ -1,0 +1,25 @@
+{
+  "summary": {
+    "activeSessions": 12,
+    "successRate": 92,
+    "errorRate": 8,
+    "avgLatencyMs": 1840,
+    "costToday": 37.8
+  },
+  "recentRuns": [
+    {"name": "hourly-business-ideation", "status": "success", "latencyMs": 1620, "updatedAt": "2026-03-10 19:00 UTC"},
+    {"name": "daily-summary", "status": "error", "latencyMs": 2410, "updatedAt": "2026-03-10 18:30 UTC"},
+    {"name": "telegram-reply", "status": "success", "latencyMs": 840, "updatedAt": "2026-03-10 18:15 UTC"},
+    {"name": "feishu-sync", "status": "success", "latencyMs": 1990, "updatedAt": "2026-03-10 17:58 UTC"}
+  ],
+  "alerts": [
+    {"level": "high", "title": "daily-summary 连续失败 2 次", "hint": "检查上游数据源或 API 限流"},
+    {"level": "medium", "title": "平均延迟升高到 1.8s", "hint": "检查模型调用与并发策略"},
+    {"level": "low", "title": "今日成本达到 ¥37.8", "hint": "可考虑高频任务降级模型"}
+  ],
+  "nodes": [
+    {"name": "telegram-main", "health": "healthy", "uptime": "99.9%"},
+    {"name": "cron-worker", "health": "warning", "uptime": "97.8%"},
+    {"name": "reporting", "health": "healthy", "uptime": "99.4%"}
+  ]
+}

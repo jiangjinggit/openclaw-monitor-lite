@@ -1,0 +1,4 @@
+[
+  {"id":"main","name":"Main Workspace","env":"prod","owner":"DJY","status":"healthy"},
+  {"id":"lab","name":"Idea Lab","env":"staging","owner":"DJY","status":"warning"}
+]

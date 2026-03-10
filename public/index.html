@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OpenClaw Monitor Lite</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <h1>OpenClaw Monitor Lite</h1>
+      <p>给独立开发者的轻量监控面板：看成功率、看异常、看延迟、看成本。</p>
+    </div>
+    <div class="badge">v0.9</div>
+  </header>
+
+  <section class="toolbar">
+    <label>项目切换</label>
+    <select id="projectSelect"></select>
+    <button id="errorOnly">只看异常任务</button>
+    <button id="syncNow">立即同步</button>
+    <button id="exportNow">导出数据</button>
+  </section>
+
+  <section id="summary" class="summary"></section>
+  <section><h2>同步状态</h2><div id="syncStatus" class="panel"></div></section>
+  <section><h2>运行时状态</h2><div id="runtimeStatus" class="panel"></div></section>
+  <section><h2>同步日志</h2><div id="syncLog" class="panel"></div></section>
+  <section><h2>导出记录</h2><div id="exportLog" class="panel"></div></section>
+  <section><h2>真实异常聚合</h2><div id="errorsReal" class="panel"></div></section>
+
+  <section>
+    <h2>趋势概览</h2>
+    <div class="panel chart-panel">
+      <div><h3>平均延迟趋势</h3><div id="latencyChart" class="chart"></div></div>
+      <div><h3>成功率趋势</h3><div id="successChart" class="chart"></div></div>
+      <div><h3>成本趋势</h3><div id="costChart" class="chart"></div></div>
+      <div><h3>失败次数趋势</h3><div id="failureChart" class="chart"></div></div>
+    </div>
+  </section>
+
+  <section><h2>真实数据探针</h2><div id="probe" class="panel"></div></section>
+  <section><h2>真实 Cron 快照</h2><div id="cronReal" class="nodes"></div></section>
+  <section><h2>真实 Session 快照</h2><div id="sessionsReal" class="nodes"></div></section>
+  <section class="layout">
+    <div><h2>最近任务</h2><div id="runs" class="panel"></div></div>
+    <div><h2>异常提醒</h2><div id="alerts" class="panel"></div></div>
+  </section>
+  <section><h2>作业状态</h2><div id="jobs" class="nodes"></div></section>
+  <section><h2>数据适配层</h2><div id="adapters" class="nodes"></div></section>
+  <section><h2>节点健康</h2><div id="nodes" class="nodes"></div></section>
+
+  <script src="/app.js"></script>
+</body>
+</html>

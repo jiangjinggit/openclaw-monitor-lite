@@ -1,0 +1,18 @@
+{
+  "generatedAt": "2026-03-10T12:03:27.215Z",
+  "summary": {
+    "errorCount": 1,
+    "okCount": 6,
+    "unknownCount": 3
+  },
+  "jobs": [
+    {
+      "id": "c15683dd-a08c-4db8-9b22-c86d03c98246",
+      "name": "ceo-ledger-gate",
+      "enabled": true,
+      "schedule": "0 9,17 * * * Asia/Shanghai",
+      "lastStatus": "error",
+      "nextRunAtMs": 1773190800000
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+[
+  {
+    "id": "53948363-1e9d-4c4f-a1fb-2fd137d86104",
+    "name": "ceo-production-orchestrator",
+    "enabled": true,
+    "schedule": "0 * * * * Asia/Shanghai",
+    "lastStatus": "ok",
+    "nextRunAtMs": 1773144177067
+  },
+  {
+    "id": "e257807d-9dfa-43dd-acb1-5147e6e2b20d",
+    "name": "openclaw-ecosystem-hourly-business-ideation",
+    "enabled": true,
+    "schedule": "every 3600000ms",
+    "lastStatus": "ok",
+    "nextRunAtMs": 1773147421549
+  },
+  {
+    "id": "f64bf8f5-ad33-45b0-9b5f-16047be87241",
+    "name": "ceo-reliability-manager",
+    "enabled": true,
+    "schedule": "0 9,13,17,21 * * * Asia/Shanghai",
+    "lastStatus": "ok",
+    "nextRunAtMs": 1773147600000
+  },
+  {
+    "id": "1c5dd21c-bcc6-4fed-8c3f-f8d68a4f0767",
+    "name": "ceo-evolution-loop",
+    "enabled": true,
+    "schedule": "45 21 * * * Asia/Shanghai",
+    "lastStatus": "ok",
+    "nextRunAtMs": 1773150300000
+  },
+  {
+    "id": "7569d588-e93a-4da1-8dfa-48c68ddf08f3",
+    "name": "ceo-daily-maintenance",
+    "enabled": true,
+    "schedule": "30 23 * * * Asia/Shanghai",
+    "lastStatus": "ok",
+    "nextRunAtMs": 1773156600000
+  },
+  {
+    "id": "7878da14-3370-4ea6-9038-50101c91f5ab",
+    "name": "ceo-opportunity-scan",
+    "enabled": true,
+    "schedule": "0 8 * * * Asia/Shanghai",
+    "lastStatus": "ok",
+    "nextRunAtMs": 1773187200000
+  },
+  {
+    "id": "c15683dd-a08c-4db8-9b22-c86d03c98246",
+    "name": "ceo-ledger-gate",
+    "enabled": true,
+    "schedule": "0 9,17 * * * Asia/Shanghai",
+    "lastStatus": "error",
+    "nextRunAtMs": 1773190800000
+  },
+  {
+    "id": "4c09150b-7ef3-4d03-baed-8c6c975e2783",
+    "name": "ceo-weekly-review",
+    "enabled": true,
+    "schedule": "30 18 * * 5 Asia/Shanghai",
+    "lastStatus": "unknown",
+    "nextRunAtMs": 1773397800000
+  },
+  {
+    "id": "b3257613-ec6e-4952-abad-e002485adbfd",
+    "name": "ceo-weekly-soul-review",
+    "enabled": true,
+    "schedule": "30 20 * * 0 Asia/Shanghai",
+    "lastStatus": "unknown",
+    "nextRunAtMs": 1773577800000
+  },
+  {
+    "id": "6304ad2e-d09e-4394-af34-100a91fb25df",
+    "name": "ceo-weekly-plan",
+    "enabled": true,
+    "schedule": "10 9 * * 1 Asia/Shanghai",
+    "lastStatus": "unknown",
+    "nextRunAtMs": 1773623400000
+  }
+]

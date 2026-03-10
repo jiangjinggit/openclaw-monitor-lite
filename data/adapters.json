@@ -1,0 +1,6 @@
+[
+  {"name":"mock","status":"ready","note":"当前使用本地 mock 数据驱动"},
+  {"name":"openclaw-cron","status":"planned","note":"后续接 cron runs / status 数据"},
+  {"name":"openclaw-sessions","status":"planned","note":"后续接 sessions / subagents 数据"},
+  {"name":"gateway-metrics","status":"planned","note":"后续接 gateway / config / health 数据"}
+]

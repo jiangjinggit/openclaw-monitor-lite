@@ -1,0 +1,12 @@
+{
+  "name": "openclaw-monitor-lite",
+  "version": "0.6.0",
+  "private": true,
+  "description": "OpenClaw monitoring and evaluation dashboard MVP",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "sync": "node scripts/sync-real-data.js"
+  },
+  "license": "MIT"
+}
