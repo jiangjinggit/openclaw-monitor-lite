@@ -86,6 +86,8 @@ openclaw sessions --all-agents --active 1440 --json
 - [Next actions](docs/NEXT_ACTIONS.md)
 - [Action section](docs/ACTION_SECTION.md)
 - [Upgrade path](docs/UPGRADE_PATH.md)
+- [Sample outcomes](docs/SAMPLE_OUTCOMES.md)
+- [Panel value](docs/PANEL_VALUE.md)
 - [User scenarios](docs/USER_SCENARIOS.md)
 - [Why not more complex](docs/WHY_NOT_MORE_COMPLEX.md)
 - [Why retention](docs/WHY_RETENTION.md)
