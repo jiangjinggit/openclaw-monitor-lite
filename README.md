@@ -80,11 +80,13 @@ openclaw sessions --all-agents --active 1440 --json
 - [Long-term shell rationale](docs/LONG_TERM_SHELL.md)
 - [Landing structure](docs/LANDING_STRUCTURE.md)
 - [Homepage one-pager](docs/HOMEPAGE_ONE_PAGER.md)
+- [Homepage order](docs/HOMEPAGE_ORDER.md)
 - [CTA strategy](docs/CTA_STRATEGY.md)
 - [CTA copy](docs/CTA_COPY.md)
 - [Next actions](docs/NEXT_ACTIONS.md)
 - [User scenarios](docs/USER_SCENARIOS.md)
 - [Why not more complex](docs/WHY_NOT_MORE_COMPLEX.md)
+- [Why retention](docs/WHY_RETENTION.md)
 
 ### Related repositories
 - [openclaw-security-audit-lite](https://github.com/jiangjinggit/openclaw-security-audit-lite)
