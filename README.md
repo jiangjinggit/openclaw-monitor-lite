@@ -14,6 +14,13 @@ A lightweight monitoring dashboard for OpenClaw builders and small teams.
 - Aggregates real cron errors
 - Supports manual sync, auto sync, export, sync logs, and runtime status
 
+### Best current packaging
+This repo is currently strongest as an **Agent Ops Lite / lightweight operations console** for OpenClaw, focused on:
+- cost visibility
+- alerting
+- node health
+- error log visibility
+
 ### Why this project exists
 Most OpenClaw users can make agents run, but they still lack a simple visibility layer:
 - Which cron jobs are failing?
@@ -61,8 +68,11 @@ openclaw sessions --all-agents --active 1440 --json
 ### Screenshots / Demo
 > Add screenshots here later:
 - dashboard overview
-- cron snapshot view
+- cost / alert / node health overview
 - sync status and error aggregation view
+
+### Positioning docs
+- [Agent Ops Lite positioning](docs/AGENT_OPS_LITE_POSITIONING.md)
 
 ### Related repositories
 - [openclaw-security-audit-lite](https://github.com/jiangjinggit/openclaw-security-audit-lite)
