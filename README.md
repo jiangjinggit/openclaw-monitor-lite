@@ -73,6 +73,8 @@ openclaw sessions --all-agents --active 1440 --json
 
 ### Positioning docs
 - [Agent Ops Lite positioning](docs/AGENT_OPS_LITE_POSITIONING.md)
+- [Fit guide](docs/FIT_GUIDE.md)
+- [Why OpenClaw-native](docs/WHY_OPENCLAW_NATIVE.md)
 
 ### Related repositories
 - [openclaw-security-audit-lite](https://github.com/jiangjinggit/openclaw-security-audit-lite)
