@@ -84,6 +84,8 @@ openclaw sessions --all-agents --active 1440 --json
 - [CTA strategy](docs/CTA_STRATEGY.md)
 - [CTA copy](docs/CTA_COPY.md)
 - [Next actions](docs/NEXT_ACTIONS.md)
+- [Action section](docs/ACTION_SECTION.md)
+- [Upgrade path](docs/UPGRADE_PATH.md)
 - [User scenarios](docs/USER_SCENARIOS.md)
 - [Why not more complex](docs/WHY_NOT_MORE_COMPLEX.md)
 - [Why retention](docs/WHY_RETENTION.md)
