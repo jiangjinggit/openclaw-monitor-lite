@@ -3,170 +3,273 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OpenClaw Monitor Lite</title>
+  <meta name="description" content="OpenClaw Monitor Lite - 轻量 Agent Ops 控制台" />
+  <title>OpenClaw Monitor Lite - Agent Ops 控制台</title>
   <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
-  <header class="hero">
-    <div>
-      <span class="eyebrow">OpenClaw Agent Ops Lite / 轻量运营控制台</span>
-      <h1>先看清成本、告警、节点健康和错误日志，再谈更复杂的控制层。</h1>
-      <p>面向已经在真实运行 OpenClaw 的独立开发者和小团队。这个项目更适合作为长期主壳：先解决“看得见、查得到、能提醒”，再继续扩更完整的 AgentOps 层。</p>
-      <div class="button-row">
-        <a class="cta-btn primary" href="#summary">先看当前运行视图</a>
-        <a class="cta-btn" href="#fit-stage">判断是否值得接入</a>
+  <div class="page-shell">
+    <header class="topbar">
+      <div class="topbar-content">
+        <div class="brand-row">
+          <span class="brand-badge">OpenClaw</span>
+          <span class="brand-sub">Monitor Lite</span>
+        </div>
+        <h1>Agent 运行状态、成本、异常和节点健康一目了然</h1>
+        <p class="hero-copy">为真实运行 OpenClaw 的团队打造的轻量 Agent Ops 控制台</p>
       </div>
-      <div class="hero-mini-points">
-        <span>成本可见</span>
-        <span>告警可达</span>
-        <span>节点健康可见</span>
-        <span>错误日志可追</span>
+      <div class="hero-actions">
+        <button id="syncNow" class="btn btn-primary" type="button">
+          <span class="btn-icon">↻</span>
+          <span>立即同步</span>
+        </button>
+        <button id="exportNow" class="btn" type="button">
+          <span class="btn-icon">↓</span>
+          <span>导出数据</span>
+        </button>
       </div>
-    </div>
-    <div class="badge">v0.9</div>
-  </header>
+    </header>
 
-  <section class="toolbar">
-    <label>项目切换</label>
-    <select id="projectSelect"></select>
-    <button id="errorOnly">只看异常任务</button>
-    <button id="syncNow">立即同步</button>
-    <button id="exportNow">导出数据</button>
-  </section>
+    <nav class="section-nav">
+      <a href="#overview">Overview</a>
+      <a href="#runs-section">Runs</a>
+      <a href="#trends-section">Trends</a>
+      <a href="#runtime-section">Runtime</a>
+      <a href="#infra-section">Infra</a>
+      <a href="#history-section">History</a>
+    </nav>
 
-  <section class="summary-intro">
-    <div class="metric"><strong>成本可见</strong><span>先看今天花了多少、哪些任务最值得继续观察。</span></div>
-    <div class="metric"><strong>告警可达</strong><span>先知道哪些任务失败、哪些异常需要尽快提醒。</span></div>
-    <div class="metric"><strong>节点健康可见</strong><span>先看哪些节点不稳定，而不是出问题后再排查。</span></div>
-    <div class="metric"><strong>错误日志可追</strong><span>先有统一视图，再做更细的排障和优化。</span></div>
-  </section>
+    <section class="hero-grid" id="overview">
+      <article class="hero-card hero-card-primary">
+        <span class="section-kicker">Workspace</span>
+        <div class="workspace-head">
+          <div>
+            <strong id="workspaceName">-</strong>
+            <p id="workspaceMeta">-</p>
+          </div>
+          <span id="workspaceStatus" class="status-pill">-</span>
+        </div>
+        <div class="workspace-select-row">
+          <label for="projectSelect">工作区</label>
+          <select id="projectSelect"></select>
+        </div>
+        <div class="mini-stats">
+          <div><span>最后同步</span><strong id="heroLastSync">-</strong></div>
+          <div><span>数据来源</span><strong id="heroSource">-</strong></div>
+          <div><span>运行状态</span><strong id="heroRuntime">-</strong></div>
+        </div>
+      </article>
 
-  <section>
-    <h2>首版 MVP 只卖什么</h2>
-    <div class="summary-intro">
-      <div class="metric"><strong>成本</strong><span>先看今天花了多少、哪些任务最值得继续观察。</span></div>
-      <div class="metric"><strong>告警</strong><span>先知道哪些异常最需要被及时提醒。</span></div>
-      <div class="metric"><strong>节点健康</strong><span>先知道哪些节点不稳定，而不是等故障后再翻日志。</span></div>
-      <div class="metric"><strong>错误日志</strong><span>先有统一视图，再做更细的排障和优化。</span></div>
-    </div>
-  </section>
+      <article class="hero-card hero-card-compact">
+        <span class="section-kicker">今日重点</span>
+        <ul class="value-list compact-list">
+          <li>成本是否超出预期</li>
+          <li>失败任务是否集中出现</li>
+          <li>节点是否开始波动</li>
+          <li>同步后是否有新异常</li>
+        </ul>
+      </article>
+    </section>
 
-  <section>
-    <h2>适合谁 / 不适合谁</h2>
-    <div class="summary-intro">
-      <div class="metric"><strong>更适合</strong><span>已经在真实运行 OpenClaw、开始关心成本、告警、节点健康和错误日志的人</span></div>
-      <div class="metric"><strong>暂不优先</strong><span>还没真正跑起来、只在单机轻量试玩，或一开始就要大而全企业治理的人</span></div>
-    </div>
-  </section>
+    <section class="kpi-grid" id="summary"></section>
 
-  <section>
-    <h2>为什么它是长期主壳，不是短期首单</h2>
-    <div class="summary-intro">
-      <div class="metric"><strong>短期首单</strong><span>`security-audit-lite` 更适合卖体检、风险评分和修复建议，首次购买更容易发生。</span></div>
-      <div class="metric"><strong>长期主壳</strong><span>`monitor-lite` 更适合承接持续运行阶段：成本、告警、节点健康和错误日志。</span></div>
-      <div class="metric"><strong>先后顺序</strong><span>先打首单，再承接长期运行层，这样分工更清楚、也更符合真实购买路径。</span></div>
-    </div>
-  </section>
+    <div class="section-divider"></div>
 
-  <section id="fit-stage">
-    <h2>什么阶段开始值得接入</h2>
-    <div class="summary-intro">
-      <div class="metric"><strong>开始跑 cron / session</strong><span>一旦已经进入真实运行阶段，就会开始关心哪些任务失败、哪些任务在持续花钱。</span></div>
-      <div class="metric"><strong>开始关心成本和异常</strong><span>如果已经需要知道今天花了多少、哪些异常需要提醒，就说明值得接入。</span></div>
-      <div class="metric"><strong>开始有多个节点或运行面</strong><span>一旦复杂度上升，没有统一视图就会明显增加排障成本。</span></div>
-    </div>
-  </section>
+    <section class="signal-grid">
+      <article class="signal-card signal-card-danger">
+        <span class="section-kicker">Priority</span>
+        <h3>当前头号风险</h3>
+        <p id="primaryRisk">-</p>
+      </article>
+      <article class="signal-card signal-card-warn">
+        <span class="section-kicker">Cost</span>
+        <h3>成本观察</h3>
+        <p id="costSignal">-</p>
+      </article>
+      <article class="signal-card signal-card-ok">
+        <span class="section-kicker">Health</span>
+        <h3>整体运行判断</h3>
+        <p id="healthSignal">-</p>
+      </article>
+    </section>
 
-  <section>
-    <h2>为什么它比通用 observability 工具更适合 OpenClaw</h2>
-    <div class="summary-intro">
-      <div class="metric"><strong>更贴运行对象</strong><span>直接围绕 cron、session、node 和 runtime 状态组织，而不是先讲抽象 trace。</span></div>
-      <div class="metric"><strong>更轻</strong><span>先卖成本、告警、节点健康、错误日志四个最现实的运行视图。</span></div>
-      <div class="metric"><strong>更适合作为主壳</strong><span>和安全体检模块分工明确，承担持续运行层，而不是首单体检层。</span></div>
-    </div>
-  </section>
+    <div class="section-divider"></div>
 
-  <section>
-    <h2>下一步动作</h2>
-    <div class="summary-intro">
-      <div class="metric"><strong>先看当前运行视图</strong><span>先看成本、告警、节点健康和错误日志是否已经成为真实问题。</span></div>
-      <div class="metric"><strong>判断是否值得接入</strong><span>如果已经开始持续运行 OpenClaw，就值得把这层接进来。</span></div>
-      <div class="metric"><strong>理解后续升级路径</strong><span>先从轻量运行视图开始，再升级到多节点、团队版和长期主壳。</span></div>
-    </div>
-  </section>
+    <section class="control-row">
+      <div class="control-group">
+        <span class="control-label">任务视图</span>
+        <button id="errorOnly" class="btn btn-small" type="button">只看异常任务</button>
+      </div>
+      <div class="control-meta">
+        <span>实时视图</span>
+        <span>异常优先</span>
+      </div>
+    </section>
 
-  <section>
-    <h2>首版升级路径</h2>
-    <div class="summary-intro">
-      <div class="metric"><strong>单人运行视图</strong><span>先满足独立开发者对成本、告警、健康度和错误日志的查看需求。</span></div>
-      <div class="metric"><strong>多节点 / 多任务</strong><span>再承接运行复杂度上升后的异常聚合和节点视图。</span></div>
-      <div class="metric"><strong>团队 / 长期主壳</strong><span>最后承接共享查看、长期运行观察和更完整的 Agent Ops 层。</span></div>
-    </div>
-  </section>
+    <section class="content-grid content-grid-top" id="runtime-section">
+      <article class="panel panel-large">
+        <div class="panel-head compact-head">
+          <div>
+            <span class="section-kicker">Operations Summary</span>
+            <h2>运行总览</h2>
+          </div>
+        </div>
+        <div id="syncStatus" class="stack-list dense-list"></div>
+      </article>
 
-  <section>
-    <h2>接入后你会更快看到什么</h2>
-    <div class="summary-intro">
-      <div class="metric"><strong>今天花了多少钱</strong><span>更快判断成本是否异常，以及哪些任务值得继续观察。</span></div>
-      <div class="metric"><strong>哪些任务在失败</strong><span>更快定位最近失败任务和重复异常，而不是等用户反馈。</span></div>
-      <div class="metric"><strong>哪些节点不稳定</strong><span>更快看到节点波动和健康度变化，减少故障后排查。</span></div>
-      <div class="metric"><strong>最近到底出了什么错</strong><span>更快统一看到错误摘要和趋势，而不是零散翻日志。</span></div>
-    </div>
-  </section>
+      <article class="panel">
+        <div class="panel-head compact-head">
+          <div>
+            <span class="section-kicker">Runtime</span>
+            <h2>运行时状态</h2>
+          </div>
+        </div>
+        <div id="runtimeStatus" class="stack-list dense-list"></div>
+      </article>
+    </section>
 
-  <section id="summary" class="summary"></section>
-  <section>
-    <h2>样例用户 / 使用场景</h2>
-    <div class="summary-intro">
-      <div class="metric"><strong>独立开发者</strong><span>已经开始持续跑 cron，想知道哪些任务失败、哪些任务在持续花钱。</span></div>
-      <div class="metric"><strong>小团队试点</strong><span>已经接入多个节点和渠道，需要更快发现异常和不稳定节点。</span></div>
-      <div class="metric"><strong>交付后运营阶段</strong><span>不想只靠终端日志排查，需要一个更像后台的运行视图。</span></div>
-    </div>
-  </section>
+    <section class="content-grid" id="runs-section">
+      <article class="panel panel-large">
+        <div class="panel-head">
+          <div>
+            <span class="section-kicker">Runs</span>
+            <h2>最近任务</h2>
+          </div>
+        </div>
+        <div id="runs" class="stack-list dense-list"></div>
+      </article>
 
-  <section>
-    <h2>为什么现在不需要更复杂控制台</h2>
-    <div class="summary-intro">
-      <div class="metric"><strong>先别做太重</strong><span>现在最值得先看清的是成本、告警、节点健康和错误日志，而不是一开始上大而全平台。</span></div>
-      <div class="metric"><strong>先有第一层运行视图</strong><span>先解决“看得见、查得到、能提醒”，再继续扩更复杂控制层。</span></div>
-    </div>
-  </section>
+      <article class="panel">
+        <div class="panel-head">
+          <div>
+            <span class="section-kicker">Alerts</span>
+            <h2>异常提醒</h2>
+          </div>
+        </div>
+        <div id="alerts" class="stack-list dense-list"></div>
+      </article>
+    </section>
 
-  <section>
-    <h2>为什么它值得持续使用</h2>
-    <div class="summary-intro">
-      <div class="metric"><strong>成本会持续变化</strong><span>只要任务持续跑、模型持续调用，成本就需要持续观察。</span></div>
-      <div class="metric"><strong>告警是长期需求</strong><span>任务失败、节点波动、异常提醒都不是一次性问题。</span></div>
-      <div class="metric"><strong>它更像长期运行层</strong><span>不是一次性报告，而是适合周期性查看和持续留存的主壳。</span></div>
-    </div>
-  </section>
+    <section class="content-grid" id="trends-section">
+      <div class="panel panel-large">
+        <div class="panel-head">
+          <div>
+            <span class="section-kicker">Trends</span>
+            <h2>趋势概览</h2>
+          </div>
+        </div>
+        <div class="chart-grid">
+          <div class="chart-card">
+            <h3>平均延迟 (ms)</h3>
+            <div id="latencyChart" class="chart"></div>
+          </div>
+          <div class="chart-card">
+            <h3>成功率 (%)</h3>
+            <div id="successChart" class="chart"></div>
+          </div>
+          <div class="chart-card">
+            <h3>成本趋势 (¥)</h3>
+            <div id="costChart" class="chart"></div>
+          </div>
+          <div class="chart-card">
+            <h3>失败次数</h3>
+            <div id="failureChart" class="chart"></div>
+          </div>
+        </div>
+      </div>
 
-  <section><h2>同步状态</h2><div id="syncStatus" class="panel"></div></section>
-  <section><h2>运行时状态</h2><div id="runtimeStatus" class="panel"></div></section>
-  <section><h2>同步日志</h2><div id="syncLog" class="panel"></div></section>
-  <section><h2>导出记录</h2><div id="exportLog" class="panel"></div></section>
-  <section><h2>真实异常聚合</h2><div id="errorsReal" class="panel"></div></section>
+      <div class="panel">
+        <div class="panel-head">
+          <div>
+            <span class="section-kicker">Probe</span>
+            <h2>数据探针</h2>
+          </div>
+        </div>
+        <div id="probe" class="stack-list dense-list"></div>
+      </div>
+    </section>
 
-  <section>
-    <h2>趋势概览</h2>
-    <div class="panel chart-panel">
-      <div><h3>平均延迟趋势</h3><div id="latencyChart" class="chart"></div></div>
-      <div><h3>成功率趋势</h3><div id="successChart" class="chart"></div></div>
-      <div><h3>成本趋势</h3><div id="costChart" class="chart"></div></div>
-      <div><h3>失败次数趋势</h3><div id="failureChart" class="chart"></div></div>
-    </div>
-  </section>
+    <section class="three-col-grid" id="infra-section">
+      <article class="panel">
+        <div class="panel-head">
+          <div>
+            <span class="section-kicker">Cron Jobs</span>
+            <h2>定时任务</h2>
+          </div>
+        </div>
+        <div id="cronReal" class="entity-grid"></div>
+      </article>
+      <article class="panel">
+        <div class="panel-head">
+          <div>
+            <span class="section-kicker">Sessions</span>
+            <h2>会话快照</h2>
+          </div>
+        </div>
+        <div id="sessionsReal" class="entity-grid"></div>
+      </article>
+      <article class="panel">
+        <div class="panel-head">
+          <div>
+            <span class="section-kicker">Errors</span>
+            <h2>错误聚合</h2>
+          </div>
+        </div>
+        <div id="errorsReal" class="stack-list dense-list"></div>
+      </article>
+    </section>
 
-  <section><h2>真实数据探针</h2><div id="probe" class="panel"></div></section>
-  <section><h2>真实 Cron 快照</h2><div id="cronReal" class="nodes"></div></section>
-  <section><h2>真实 Session 快照</h2><div id="sessionsReal" class="nodes"></div></section>
-  <section class="layout">
-    <div><h2>最近任务</h2><div id="runs" class="panel"></div></div>
-    <div><h2>异常提醒</h2><div id="alerts" class="panel"></div></div>
-  </section>
-  <section><h2>作业状态</h2><div id="jobs" class="nodes"></div></section>
-  <section><h2>数据适配层</h2><div id="adapters" class="nodes"></div></section>
-  <section><h2>节点健康</h2><div id="nodes" class="nodes"></div></section>
+    <section class="three-col-grid">
+      <article class="panel">
+        <div class="panel-head">
+          <div>
+            <span class="section-kicker">Jobs</span>
+            <h2>任务配置</h2>
+          </div>
+        </div>
+        <div id="jobs" class="entity-grid"></div>
+      </article>
+      <article class="panel">
+        <div class="panel-head">
+          <div>
+            <span class="section-kicker">Nodes</span>
+            <h2>节点状态</h2>
+          </div>
+        </div>
+        <div id="nodes" class="entity-grid"></div>
+      </article>
+      <article class="panel">
+        <div class="panel-head">
+          <div>
+            <span class="section-kicker">Adapters</span>
+            <h2>适配器</h2>
+          </div>
+        </div>
+        <div id="adapters" class="entity-grid"></div>
+      </article>
+    </section>
+
+    <section class="content-grid" id="history-section">
+      <article class="panel">
+        <div class="panel-head">
+          <div>
+            <span class="section-kicker">Sync History</span>
+            <h2>同步日志</h2>
+          </div>
+        </div>
+        <div id="syncLog" class="stack-list dense-list"></div>
+      </article>
+      <article class="panel">
+        <div class="panel-head">
+          <div>
+            <span class="section-kicker">Exports</span>
+            <h2>导出记录</h2>
+          </div>
+        </div>
+        <div id="exportLog" class="stack-list dense-list"></div>
+      </article>
+    </section>
+  </div>
 
   <script src="/app.js"></script>
 </body>
