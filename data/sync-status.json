@@ -1,8 +1,8 @@
 {
-  "lastSyncAt": "2026-03-10T12:03:27.215Z",
+  "lastSyncAt": "2026-03-13T06:25:34.502Z",
   "source": "openclaw-cli",
   "cronCount": 10,
-  "sessionCount": 49,
+  "sessionCount": 68,
   "errorCount": 1,
   "status": "ok",
   "lastError": null

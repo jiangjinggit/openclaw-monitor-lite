@@ -1,345 +1,478 @@
 [
   {
-    "key": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104",
-    "displayName": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104",
-    "channel": "unknown",
-    "updatedAt": 1773144177075,
-    "model": "claude-sonnet-4-6-thinking"
-  },
-  {
-    "key": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:976596c4-a0fa-43d9-a3b2-9ab018d4b033",
-    "displayName": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:976596c4-a0fa-43d9-a3b2-9ab018d4b033",
-    "channel": "unknown",
-    "updatedAt": 1773144177075,
-    "model": "claude-sonnet-4-6-thinking"
-  },
-  {
     "key": "agent:djy_build:telegram:djy_build:direct:8237305071",
     "displayName": "agent:djy_build:telegram:djy_build:direct:8237305071",
     "channel": "unknown",
-    "updatedAt": 1773144077752,
-    "model": "gpt-5.4"
-  },
-  {
-    "key": "agent:djy_build:cron:e257807d-9dfa-43dd-acb1-5147e6e2b20d",
-    "displayName": "agent:djy_build:cron:e257807d-9dfa-43dd-acb1-5147e6e2b20d",
-    "channel": "unknown",
-    "updatedAt": 1773143821701,
-    "model": "gpt-5.4"
-  },
-  {
-    "key": "agent:djy_build:cron:e257807d-9dfa-43dd-acb1-5147e6e2b20d:run:eded161c-3312-4b24-a588-995fc01926f4",
-    "displayName": "agent:djy_build:cron:e257807d-9dfa-43dd-acb1-5147e6e2b20d:run:eded161c-3312-4b24-a588-995fc01926f4",
-    "channel": "unknown",
-    "updatedAt": 1773143821701,
-    "model": "gpt-5.4"
+    "updatedAt": 1773383101552,
+    "model": "claude-sonnet-4-6-thinking"
   },
   {
     "key": "agent:djy_ceo:telegram:djy_ceo:direct:8237305071",
     "displayName": "agent:djy_ceo:telegram:djy_ceo:direct:8237305071",
     "channel": "unknown",
-    "updatedAt": 1773140630086,
+    "updatedAt": 1773381812244,
     "model": "claude-sonnet-4-6-thinking"
   },
   {
-    "key": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:1a88c773-0106-4585-a8e2-f7528315f147",
-    "displayName": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:1a88c773-0106-4585-a8e2-f7528315f147",
+    "key": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104",
+    "displayName": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104",
     "channel": "unknown",
-    "updatedAt": 1773140577075,
+    "updatedAt": 1773381777077,
     "model": "claude-sonnet-4-6-thinking"
   },
   {
-    "key": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:6ba33dae-6532-451b-918d-f57279787d2b",
-    "displayName": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:6ba33dae-6532-451b-918d-f57279787d2b",
+    "key": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:7b2d94c2-7ab3-4c62-816a-8e529079e3b0",
+    "displayName": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:7b2d94c2-7ab3-4c62-816a-8e529079e3b0",
     "channel": "unknown",
-    "updatedAt": 1773136977075,
+    "updatedAt": 1773381777077,
     "model": "claude-sonnet-4-6-thinking"
   },
   {
-    "key": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:f54baa0a-85af-4918-aac8-8e984db550ab",
-    "displayName": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:f54baa0a-85af-4918-aac8-8e984db550ab",
+    "key": "agent:djy_build:cron:e257807d-9dfa-43dd-acb1-5147e6e2b20d",
+    "displayName": "agent:djy_build:cron:e257807d-9dfa-43dd-acb1-5147e6e2b20d",
     "channel": "unknown",
-    "updatedAt": 1773133400158,
+    "updatedAt": 1773381422024,
+    "model": "gpt-5.4"
+  },
+  {
+    "key": "agent:djy_build:cron:e257807d-9dfa-43dd-acb1-5147e6e2b20d:run:0356b765-2678-4442-a9f2-9837a9944daa",
+    "displayName": "agent:djy_build:cron:e257807d-9dfa-43dd-acb1-5147e6e2b20d:run:0356b765-2678-4442-a9f2-9837a9944daa",
+    "channel": "unknown",
+    "updatedAt": 1773381422024,
+    "model": "gpt-5.4"
+  },
+  {
+    "key": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:dd2b8253-9f9a-4811-9b02-2d940a82a880",
+    "displayName": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:dd2b8253-9f9a-4811-9b02-2d940a82a880",
+    "channel": "unknown",
+    "updatedAt": 1773378177074,
     "model": "claude-sonnet-4-6-thinking"
   },
   {
     "key": "agent:djy_ceo:cron:f64bf8f5-ad33-45b0-9b5f-16047be87241",
     "displayName": "agent:djy_ceo:cron:f64bf8f5-ad33-45b0-9b5f-16047be87241",
     "channel": "unknown",
-    "updatedAt": 1773133280397,
+    "updatedAt": 1773378000010,
     "model": "claude-sonnet-4-6-thinking"
   },
   {
-    "key": "agent:djy_ceo:cron:f64bf8f5-ad33-45b0-9b5f-16047be87241:run:0cf9fb91-7175-4b11-8f22-f775d8458516",
-    "displayName": "agent:djy_ceo:cron:f64bf8f5-ad33-45b0-9b5f-16047be87241:run:0cf9fb91-7175-4b11-8f22-f775d8458516",
+    "key": "agent:djy_ceo:cron:f64bf8f5-ad33-45b0-9b5f-16047be87241:run:2790ce1c-a4e1-4591-9b51-91b007759f97",
+    "displayName": "agent:djy_ceo:cron:f64bf8f5-ad33-45b0-9b5f-16047be87241:run:2790ce1c-a4e1-4591-9b51-91b007759f97",
     "channel": "unknown",
-    "updatedAt": 1773133280397,
+    "updatedAt": 1773378000010,
+    "model": "claude-sonnet-4-6-thinking"
+  },
+  {
+    "key": "agent:djy_build:cron:e257807d-9dfa-43dd-acb1-5147e6e2b20d:run:a93435dc-7d89-401d-8b9e-d8425d7cfc0f",
+    "displayName": "agent:djy_build:cron:e257807d-9dfa-43dd-acb1-5147e6e2b20d:run:a93435dc-7d89-401d-8b9e-d8425d7cfc0f",
+    "channel": "unknown",
+    "updatedAt": 1773377822002,
+    "model": "gpt-5.4"
+  },
+  {
+    "key": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:714b763a-bad7-4b62-abc3-79a0de8b7924",
+    "displayName": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:714b763a-bad7-4b62-abc3-79a0de8b7924",
+    "channel": "unknown",
+    "updatedAt": 1773374577077,
+    "model": "claude-sonnet-4-6-thinking"
+  },
+  {
+    "key": "agent:djy_build:cron:e257807d-9dfa-43dd-acb1-5147e6e2b20d:run:65de249c-fedb-43a0-938e-2410ad123d7d",
+    "displayName": "agent:djy_build:cron:e257807d-9dfa-43dd-acb1-5147e6e2b20d:run:65de249c-fedb-43a0-938e-2410ad123d7d",
+    "channel": "unknown",
+    "updatedAt": 1773374221994,
+    "model": "gpt-5.4"
+  },
+  {
+    "key": "agent:djy_build:main",
+    "displayName": "agent:djy_build:main",
+    "channel": "unknown",
+    "updatedAt": 1773371928840,
+    "model": "gpt-5.4"
+  },
+  {
+    "key": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:a6670c1b-b1c7-44de-b407-54566eaa897d",
+    "displayName": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:a6670c1b-b1c7-44de-b407-54566eaa897d",
+    "channel": "unknown",
+    "updatedAt": 1773370977073,
+    "model": "claude-sonnet-4-6-thinking"
+  },
+  {
+    "key": "agent:djy_build:cron:e257807d-9dfa-43dd-acb1-5147e6e2b20d:run:221940c8-2932-436c-a83d-45c14940dd14",
+    "displayName": "agent:djy_build:cron:e257807d-9dfa-43dd-acb1-5147e6e2b20d:run:221940c8-2932-436c-a83d-45c14940dd14",
+    "channel": "unknown",
+    "updatedAt": 1773370621988,
+    "model": "gpt-5.4"
+  },
+  {
+    "key": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:8fab71b0-2e3b-4134-9852-28cec0c3b755",
+    "displayName": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:8fab71b0-2e3b-4134-9852-28cec0c3b755",
+    "channel": "unknown",
+    "updatedAt": 1773367377075,
+    "model": "claude-sonnet-4-6-thinking"
+  },
+  {
+    "key": "agent:djy_build:cron:e257807d-9dfa-43dd-acb1-5147e6e2b20d:run:ad153f79-f398-4edf-8426-5a6f91ca7cc9",
+    "displayName": "agent:djy_build:cron:e257807d-9dfa-43dd-acb1-5147e6e2b20d:run:ad153f79-f398-4edf-8426-5a6f91ca7cc9",
+    "channel": "unknown",
+    "updatedAt": 1773367021983,
+    "model": "gpt-5.4"
+  },
+  {
+    "key": "agent:djy_ceo:main",
+    "displayName": "agent:djy_ceo:main",
+    "channel": "unknown",
+    "updatedAt": 1773365431184,
+    "model": "claude-sonnet-4-6-thinking"
+  },
+  {
+    "key": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:c7a9ed1e-fcf4-46fd-bf39-1e5f2b53b691",
+    "displayName": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:c7a9ed1e-fcf4-46fd-bf39-1e5f2b53b691",
+    "channel": "unknown",
+    "updatedAt": 1773363777074,
+    "model": "claude-sonnet-4-6-thinking"
+  },
+  {
+    "key": "agent:djy_ceo:cron:f64bf8f5-ad33-45b0-9b5f-16047be87241:run:90061197-9dcd-4d34-bf59-bc3fc4c00162",
+    "displayName": "agent:djy_ceo:cron:f64bf8f5-ad33-45b0-9b5f-16047be87241:run:90061197-9dcd-4d34-bf59-bc3fc4c00162",
+    "channel": "unknown",
+    "updatedAt": 1773363668783,
     "model": "claude-sonnet-4-6-thinking"
   },
   {
     "key": "agent:djy_ceo:cron:c15683dd-a08c-4db8-9b22-c86d03c98246",
     "displayName": "agent:djy_ceo:cron:c15683dd-a08c-4db8-9b22-c86d03c98246",
     "channel": "unknown",
-    "updatedAt": 1773133200008,
+    "updatedAt": 1773363617077,
     "model": "claude-sonnet-4-6-thinking"
   },
   {
-    "key": "agent:djy_ceo:cron:c15683dd-a08c-4db8-9b22-c86d03c98246:run:3eacf57c-0abf-4e0e-a31a-729f8b80fe1f",
-    "displayName": "agent:djy_ceo:cron:c15683dd-a08c-4db8-9b22-c86d03c98246:run:3eacf57c-0abf-4e0e-a31a-729f8b80fe1f",
+    "key": "agent:djy_ceo:cron:c15683dd-a08c-4db8-9b22-c86d03c98246:run:0a9fd9e1-36f0-4885-ad0e-0875d856d02d",
+    "displayName": "agent:djy_ceo:cron:c15683dd-a08c-4db8-9b22-c86d03c98246:run:0a9fd9e1-36f0-4885-ad0e-0875d856d02d",
     "channel": "unknown",
-    "updatedAt": 1773133200008,
+    "updatedAt": 1773363617077,
     "model": "claude-sonnet-4-6-thinking"
   },
   {
-    "key": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:da7e2127-2c24-43e4-8978-7a5008a2067a",
-    "displayName": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:da7e2127-2c24-43e4-8978-7a5008a2067a",
+    "key": "agent:djy_build:cron:e257807d-9dfa-43dd-acb1-5147e6e2b20d:run:1c7ff026-a1c7-4131-b326-9bc2be77bb67",
+    "displayName": "agent:djy_build:cron:e257807d-9dfa-43dd-acb1-5147e6e2b20d:run:1c7ff026-a1c7-4131-b326-9bc2be77bb67",
     "channel": "unknown",
-    "updatedAt": 1773129777074,
-    "model": "claude-sonnet-4-6-thinking"
+    "updatedAt": 1773363421974,
+    "model": "gpt-5.4"
   },
   {
-    "key": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:1fabcf7a-d5f2-4a6e-be6f-b213fb0a492b",
-    "displayName": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:1fabcf7a-d5f2-4a6e-be6f-b213fb0a492b",
+    "key": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:83a46631-2ccc-4588-801c-254eba338249",
+    "displayName": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:83a46631-2ccc-4588-801c-254eba338249",
     "channel": "unknown",
-    "updatedAt": 1773126177074,
-    "model": "claude-sonnet-4-6-thinking"
-  },
-  {
-    "key": "agent:djy_build:main",
-    "displayName": "agent:djy_build:main",
-    "channel": "unknown",
-    "updatedAt": 1773125996077,
-    "model": "claude-sonnet-4-6-thinking"
-  },
-  {
-    "key": "agent:djy_ceo:main",
-    "displayName": "agent:djy_ceo:main",
-    "channel": "unknown",
-    "updatedAt": 1773125980997,
-    "model": "claude-sonnet-4-6-thinking"
-  },
-  {
-    "key": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:f472398a-78cc-4ac3-89ec-023e14d91477",
-    "displayName": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:f472398a-78cc-4ac3-89ec-023e14d91477",
-    "channel": "unknown",
-    "updatedAt": 1773122577075,
-    "model": "claude-sonnet-4-6-thinking"
-  },
-  {
-    "key": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:23a2f535-a53e-43b5-8f22-c89b080dc647",
-    "displayName": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:23a2f535-a53e-43b5-8f22-c89b080dc647",
-    "channel": "unknown",
-    "updatedAt": 1773118977076,
-    "model": "claude-sonnet-4-6-thinking"
-  },
-  {
-    "key": "agent:djy_ceo:cron:f64bf8f5-ad33-45b0-9b5f-16047be87241:run:c44e2198-b2b9-4b43-9c6f-c31758a47c24",
-    "displayName": "agent:djy_ceo:cron:f64bf8f5-ad33-45b0-9b5f-16047be87241:run:c44e2198-b2b9-4b43-9c6f-c31758a47c24",
-    "channel": "unknown",
-    "updatedAt": 1773118800006,
-    "model": "claude-sonnet-4-6-thinking"
-  },
-  {
-    "key": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:eef7c25b-2f2c-4531-9d4d-aed6e58b2f9b",
-    "displayName": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:eef7c25b-2f2c-4531-9d4d-aed6e58b2f9b",
-    "channel": "unknown",
-    "updatedAt": 1773114600006,
-    "model": "claude-sonnet-4-6-thinking"
-  },
-  {
-    "key": "agent:djy_ceo:cron:c15683dd-a08c-4db8-9b22-c86d03c98246:run:efcd4c89-8a06-4f5b-a41c-8d75488f9ed4",
-    "displayName": "agent:djy_ceo:cron:c15683dd-a08c-4db8-9b22-c86d03c98246:run:efcd4c89-8a06-4f5b-a41c-8d75488f9ed4",
-    "channel": "unknown",
-    "updatedAt": 1773113700007,
-    "model": "claude-sonnet-4-6-thinking"
-  },
-  {
-    "key": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:77578f06-c6a3-4d54-8fe3-3f4c5003b4e7",
-    "displayName": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:77578f06-c6a3-4d54-8fe3-3f4c5003b4e7",
-    "channel": "unknown",
-    "updatedAt": 1773112800011,
-    "model": "claude-sonnet-4-6-thinking"
-  },
-  {
-    "key": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:6e9aaa59-5041-4bac-baeb-8ffa5459db0f",
-    "displayName": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:6e9aaa59-5041-4bac-baeb-8ffa5459db0f",
-    "channel": "unknown",
-    "updatedAt": 1773111000009,
-    "model": "claude-sonnet-4-6-thinking"
-  },
-  {
-    "key": "agent:djy_ceo:cron:c15683dd-a08c-4db8-9b22-c86d03c98246:run:2c171f68-9d81-4607-8f90-243f5df8bb67",
-    "displayName": "agent:djy_ceo:cron:c15683dd-a08c-4db8-9b22-c86d03c98246:run:2c171f68-9d81-4607-8f90-243f5df8bb67",
-    "channel": "unknown",
-    "updatedAt": 1773110100012,
-    "model": "claude-sonnet-4-6-thinking"
-  },
-  {
-    "key": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:3f9a4c0c-a4d7-4b9a-bdfd-ddae4e3c8afd",
-    "displayName": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:3f9a4c0c-a4d7-4b9a-bdfd-ddae4e3c8afd",
-    "channel": "unknown",
-    "updatedAt": 1773109200008,
-    "model": "claude-sonnet-4-6-thinking"
-  },
-  {
-    "key": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:ddfe3b1d-eca0-407a-9ad7-aef4f2ad0324",
-    "displayName": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:ddfe3b1d-eca0-407a-9ad7-aef4f2ad0324",
-    "channel": "unknown",
-    "updatedAt": 1773107400012,
-    "model": "claude-sonnet-4-6-thinking"
-  },
-  {
-    "key": "agent:djy_ceo:cron:c15683dd-a08c-4db8-9b22-c86d03c98246:run:1a0a73a9-23a0-4bdd-9329-440e75c56259",
-    "displayName": "agent:djy_ceo:cron:c15683dd-a08c-4db8-9b22-c86d03c98246:run:1a0a73a9-23a0-4bdd-9329-440e75c56259",
-    "channel": "unknown",
-    "updatedAt": 1773106500008,
-    "model": "claude-sonnet-4-6-thinking"
-  },
-  {
-    "key": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:b5a47773-3483-41d3-b023-342abbb02a71",
-    "displayName": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:b5a47773-3483-41d3-b023-342abbb02a71",
-    "channel": "unknown",
-    "updatedAt": 1773105600009,
-    "model": "claude-sonnet-4-6-thinking"
-  },
-  {
-    "key": "agent:djy_ceo:cron:f64bf8f5-ad33-45b0-9b5f-16047be87241:run:8940aba7-8e57-4f85-9261-4bd9f61e0057",
-    "displayName": "agent:djy_ceo:cron:f64bf8f5-ad33-45b0-9b5f-16047be87241:run:8940aba7-8e57-4f85-9261-4bd9f61e0057",
-    "channel": "unknown",
-    "updatedAt": 1773104400010,
-    "model": "claude-sonnet-4-6-thinking"
-  },
-  {
-    "key": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:70e80e63-9432-4601-a324-d5e267784ead",
-    "displayName": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:70e80e63-9432-4601-a324-d5e267784ead",
-    "channel": "unknown",
-    "updatedAt": 1773103800009,
-    "model": "claude-sonnet-4-6-thinking"
-  },
-  {
-    "key": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:c7850886-800f-43af-8494-04888dc7f157",
-    "displayName": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:c7850886-800f-43af-8494-04888dc7f157",
-    "channel": "unknown",
-    "updatedAt": 1773102000006,
+    "updatedAt": 1773360177076,
     "model": "claude-sonnet-4-6-thinking"
   },
   {
     "key": "agent:djy_ceo:cron:7878da14-3370-4ea6-9038-50101c91f5ab",
     "displayName": "agent:djy_ceo:cron:7878da14-3370-4ea6-9038-50101c91f5ab",
     "channel": "unknown",
-    "updatedAt": 1773100800320,
+    "updatedAt": 1773360000008,
     "model": "claude-sonnet-4-6-thinking"
   },
   {
-    "key": "agent:djy_ceo:cron:7878da14-3370-4ea6-9038-50101c91f5ab:run:3702b2d7-2ff4-44ea-a744-e7521afd66d2",
-    "displayName": "agent:djy_ceo:cron:7878da14-3370-4ea6-9038-50101c91f5ab:run:3702b2d7-2ff4-44ea-a744-e7521afd66d2",
+    "key": "agent:djy_ceo:cron:7878da14-3370-4ea6-9038-50101c91f5ab:run:4bdd20e1-4497-4a43-aa3f-91afa8cdf611",
+    "displayName": "agent:djy_ceo:cron:7878da14-3370-4ea6-9038-50101c91f5ab:run:4bdd20e1-4497-4a43-aa3f-91afa8cdf611",
     "channel": "unknown",
-    "updatedAt": 1773100800320,
+    "updatedAt": 1773360000008,
     "model": "claude-sonnet-4-6-thinking"
+  },
+  {
+    "key": "agent:djy_build:cron:e257807d-9dfa-43dd-acb1-5147e6e2b20d:run:a580c5ba-6737-4b1a-a56e-094cf5dbaa52",
+    "displayName": "agent:djy_build:cron:e257807d-9dfa-43dd-acb1-5147e6e2b20d:run:a580c5ba-6737-4b1a-a56e-094cf5dbaa52",
+    "channel": "unknown",
+    "updatedAt": 1773359821968,
+    "model": "gpt-5.4"
+  },
+  {
+    "key": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:31f36ce8-6b12-4806-b708-3538ab612570",
+    "displayName": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:31f36ce8-6b12-4806-b708-3538ab612570",
+    "channel": "unknown",
+    "updatedAt": 1773356577074,
+    "model": "claude-sonnet-4-6-thinking"
+  },
+  {
+    "key": "agent:djy_build:cron:e257807d-9dfa-43dd-acb1-5147e6e2b20d:run:8cd57f87-9714-47c2-8d93-9e913547adec",
+    "displayName": "agent:djy_build:cron:e257807d-9dfa-43dd-acb1-5147e6e2b20d:run:8cd57f87-9714-47c2-8d93-9e913547adec",
+    "channel": "unknown",
+    "updatedAt": 1773356221959,
+    "model": "gpt-5.4"
+  },
+  {
+    "key": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:a762c41a-076a-447b-b4be-e797a1c8aae2",
+    "displayName": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:a762c41a-076a-447b-b4be-e797a1c8aae2",
+    "channel": "unknown",
+    "updatedAt": 1773352977079,
+    "model": "claude-sonnet-4-6-thinking"
+  },
+  {
+    "key": "agent:djy_build:cron:e257807d-9dfa-43dd-acb1-5147e6e2b20d:run:5c56624d-5647-4038-9251-179b74daae3f",
+    "displayName": "agent:djy_build:cron:e257807d-9dfa-43dd-acb1-5147e6e2b20d:run:5c56624d-5647-4038-9251-179b74daae3f",
+    "channel": "unknown",
+    "updatedAt": 1773352621954,
+    "model": "gpt-5.4"
+  },
+  {
+    "key": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:2176664b-5d77-45a0-8dd7-aff645860c8e",
+    "displayName": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:2176664b-5d77-45a0-8dd7-aff645860c8e",
+    "channel": "unknown",
+    "updatedAt": 1773349377075,
+    "model": "claude-sonnet-4-6-thinking"
+  },
+  {
+    "key": "agent:djy_build:cron:e257807d-9dfa-43dd-acb1-5147e6e2b20d:run:838900ae-1701-41f1-a454-22b53fe8b95f",
+    "displayName": "agent:djy_build:cron:e257807d-9dfa-43dd-acb1-5147e6e2b20d:run:838900ae-1701-41f1-a454-22b53fe8b95f",
+    "channel": "unknown",
+    "updatedAt": 1773349021948,
+    "model": "gpt-5.4"
+  },
+  {
+    "key": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:3dbda460-a498-4ffa-a3a2-f69e967a3134",
+    "displayName": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:3dbda460-a498-4ffa-a3a2-f69e967a3134",
+    "channel": "unknown",
+    "updatedAt": 1773345777076,
+    "model": "claude-sonnet-4-6-thinking"
+  },
+  {
+    "key": "agent:djy_build:cron:e257807d-9dfa-43dd-acb1-5147e6e2b20d:run:ac89b2d2-b241-44bd-98b3-a1fbb13b9891",
+    "displayName": "agent:djy_build:cron:e257807d-9dfa-43dd-acb1-5147e6e2b20d:run:ac89b2d2-b241-44bd-98b3-a1fbb13b9891",
+    "channel": "unknown",
+    "updatedAt": 1773345421945,
+    "model": "gpt-5.4"
+  },
+  {
+    "key": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:16764d57-998b-401f-848c-b3117b81bbe3",
+    "displayName": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:16764d57-998b-401f-848c-b3117b81bbe3",
+    "channel": "unknown",
+    "updatedAt": 1773342177075,
+    "model": "claude-sonnet-4-6-thinking"
+  },
+  {
+    "key": "agent:djy_build:cron:e257807d-9dfa-43dd-acb1-5147e6e2b20d:run:6d46eff8-7120-41b1-bc38-78d14bf79c7a",
+    "displayName": "agent:djy_build:cron:e257807d-9dfa-43dd-acb1-5147e6e2b20d:run:6d46eff8-7120-41b1-bc38-78d14bf79c7a",
+    "channel": "unknown",
+    "updatedAt": 1773341821938,
+    "model": "gpt-5.4"
+  },
+  {
+    "key": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:4ba712a6-8880-4cce-afcb-da613b89d831",
+    "displayName": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:4ba712a6-8880-4cce-afcb-da613b89d831",
+    "channel": "unknown",
+    "updatedAt": 1773338577073,
+    "model": "claude-sonnet-4-6-thinking"
+  },
+  {
+    "key": "agent:djy_build:cron:e257807d-9dfa-43dd-acb1-5147e6e2b20d:run:f2f6bc96-9b4d-4ef6-9395-f865f70104e9",
+    "displayName": "agent:djy_build:cron:e257807d-9dfa-43dd-acb1-5147e6e2b20d:run:f2f6bc96-9b4d-4ef6-9395-f865f70104e9",
+    "channel": "unknown",
+    "updatedAt": 1773338221932,
+    "model": "gpt-5.4"
+  },
+  {
+    "key": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:11d1639c-9deb-4e37-918a-651dd7521cb9",
+    "displayName": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:11d1639c-9deb-4e37-918a-651dd7521cb9",
+    "channel": "unknown",
+    "updatedAt": 1773334977074,
+    "model": "claude-sonnet-4-6-thinking"
+  },
+  {
+    "key": "agent:djy_build:cron:e257807d-9dfa-43dd-acb1-5147e6e2b20d:run:ed811dcb-c580-4e31-b7b6-9a368e07a8ad",
+    "displayName": "agent:djy_build:cron:e257807d-9dfa-43dd-acb1-5147e6e2b20d:run:ed811dcb-c580-4e31-b7b6-9a368e07a8ad",
+    "channel": "unknown",
+    "updatedAt": 1773334621925,
+    "model": "gpt-5.4"
+  },
+  {
+    "key": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:3e1500f8-9afe-447a-a444-b0640b67aee6",
+    "displayName": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:3e1500f8-9afe-447a-a444-b0640b67aee6",
+    "channel": "unknown",
+    "updatedAt": 1773331377074,
+    "model": "claude-sonnet-4-6-thinking"
+  },
+  {
+    "key": "agent:djy_build:cron:e257807d-9dfa-43dd-acb1-5147e6e2b20d:run:a70257f3-9516-4d6d-b689-98575445c0b2",
+    "displayName": "agent:djy_build:cron:e257807d-9dfa-43dd-acb1-5147e6e2b20d:run:a70257f3-9516-4d6d-b689-98575445c0b2",
+    "channel": "unknown",
+    "updatedAt": 1773331021920,
+    "model": "gpt-5.4"
   },
   {
     "key": "agent:djy_ceo:cron:7569d588-e93a-4da1-8dfa-48c68ddf08f3",
     "displayName": "agent:djy_ceo:cron:7569d588-e93a-4da1-8dfa-48c68ddf08f3",
     "channel": "unknown",
-    "updatedAt": 1773070200350,
+    "updatedAt": 1773329400030,
     "model": "claude-sonnet-4-6-thinking"
   },
   {
-    "key": "agent:djy_ceo:cron:7569d588-e93a-4da1-8dfa-48c68ddf08f3:run:94469066-7384-4a77-b35a-14f4a718d057",
-    "displayName": "agent:djy_ceo:cron:7569d588-e93a-4da1-8dfa-48c68ddf08f3:run:94469066-7384-4a77-b35a-14f4a718d057",
+    "key": "agent:djy_ceo:cron:7569d588-e93a-4da1-8dfa-48c68ddf08f3:run:fcfebe8b-dba0-4544-a364-8dc1cb1d1873",
+    "displayName": "agent:djy_ceo:cron:7569d588-e93a-4da1-8dfa-48c68ddf08f3:run:fcfebe8b-dba0-4544-a364-8dc1cb1d1873",
     "channel": "unknown",
-    "updatedAt": 1773070200350,
+    "updatedAt": 1773329400030,
     "model": "claude-sonnet-4-6-thinking"
   },
   {
-    "key": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:41a34262-fd31-4fca-8ef6-2b31981b09cc",
-    "displayName": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:41a34262-fd31-4fca-8ef6-2b31981b09cc",
+    "key": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:193add91-0eca-4c8c-8923-491f3c8f8f89",
+    "displayName": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:193add91-0eca-4c8c-8923-491f3c8f8f89",
     "channel": "unknown",
-    "updatedAt": 1773067800008,
+    "updatedAt": 1773327777076,
     "model": "claude-sonnet-4-6-thinking"
   },
   {
-    "key": "agent:djy_ceo:cron:c15683dd-a08c-4db8-9b22-c86d03c98246:run:ded792a8-d8ca-4122-ad92-46f7f8c1a986",
-    "displayName": "agent:djy_ceo:cron:c15683dd-a08c-4db8-9b22-c86d03c98246:run:ded792a8-d8ca-4122-ad92-46f7f8c1a986",
+    "key": "agent:djy_build:cron:e257807d-9dfa-43dd-acb1-5147e6e2b20d:run:4da4ae48-69fa-4287-9a73-6d47a4e40eab",
+    "displayName": "agent:djy_build:cron:e257807d-9dfa-43dd-acb1-5147e6e2b20d:run:4da4ae48-69fa-4287-9a73-6d47a4e40eab",
     "channel": "unknown",
-    "updatedAt": 1773066900006,
+    "updatedAt": 1773327421911,
+    "model": "gpt-5.4"
+  },
+  {
+    "key": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:54b72f36-56b7-463a-9990-a8089a504dbe",
+    "displayName": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:54b72f36-56b7-463a-9990-a8089a504dbe",
+    "channel": "unknown",
+    "updatedAt": 1773324177076,
     "model": "claude-sonnet-4-6-thinking"
   },
   {
-    "key": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:b96b7950-0a7b-492a-a54b-3eb3616d79c5",
-    "displayName": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:b96b7950-0a7b-492a-a54b-3eb3616d79c5",
+    "key": "agent:djy_build:cron:e257807d-9dfa-43dd-acb1-5147e6e2b20d:run:13d19455-43ac-4136-90fd-f30df465297e",
+    "displayName": "agent:djy_build:cron:e257807d-9dfa-43dd-acb1-5147e6e2b20d:run:13d19455-43ac-4136-90fd-f30df465297e",
     "channel": "unknown",
-    "updatedAt": 1773066000007,
-    "model": "claude-sonnet-4-6-thinking"
-  },
-  {
-    "key": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:af37c716-b0fd-41fd-bed2-e8eac66259de",
-    "displayName": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:af37c716-b0fd-41fd-bed2-e8eac66259de",
-    "channel": "unknown",
-    "updatedAt": 1773064200007,
-    "model": "claude-sonnet-4-6-thinking"
+    "updatedAt": 1773323821906,
+    "model": "gpt-5.4"
   },
   {
     "key": "agent:djy_ceo:cron:1c5dd21c-bcc6-4fed-8c3f-f8d68a4f0767",
     "displayName": "agent:djy_ceo:cron:1c5dd21c-bcc6-4fed-8c3f-f8d68a4f0767",
     "channel": "unknown",
-    "updatedAt": 1773063900176,
+    "updatedAt": 1773323100009,
     "model": "claude-sonnet-4-6-thinking"
   },
   {
-    "key": "agent:djy_ceo:cron:1c5dd21c-bcc6-4fed-8c3f-f8d68a4f0767:run:f27e524c-d710-4356-8573-5cefaa89eb73",
-    "displayName": "agent:djy_ceo:cron:1c5dd21c-bcc6-4fed-8c3f-f8d68a4f0767:run:f27e524c-d710-4356-8573-5cefaa89eb73",
+    "key": "agent:djy_ceo:cron:1c5dd21c-bcc6-4fed-8c3f-f8d68a4f0767:run:c73c5103-0365-4f4f-9aa9-d2338ece13db",
+    "displayName": "agent:djy_ceo:cron:1c5dd21c-bcc6-4fed-8c3f-f8d68a4f0767:run:c73c5103-0365-4f4f-9aa9-d2338ece13db",
     "channel": "unknown",
-    "updatedAt": 1773063900176,
+    "updatedAt": 1773323100009,
     "model": "claude-sonnet-4-6-thinking"
   },
   {
-    "key": "agent:djy_ceo:cron:c15683dd-a08c-4db8-9b22-c86d03c98246:run:3f1e15b9-5b0c-47f2-bada-73abfc0be116",
-    "displayName": "agent:djy_ceo:cron:c15683dd-a08c-4db8-9b22-c86d03c98246:run:3f1e15b9-5b0c-47f2-bada-73abfc0be116",
+    "key": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:d5c0bb37-a05e-49b1-b847-01acf639ce52",
+    "displayName": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:d5c0bb37-a05e-49b1-b847-01acf639ce52",
     "channel": "unknown",
-    "updatedAt": 1773063300007,
+    "updatedAt": 1773320577077,
     "model": "claude-sonnet-4-6-thinking"
   },
   {
-    "key": "agent:djy_build:telegram:slash:8237305071",
-    "displayName": "agent:djy_build:telegram:slash:8237305071",
+    "key": "agent:djy_ceo:cron:f64bf8f5-ad33-45b0-9b5f-16047be87241:run:f60b8e26-a650-4138-9bbe-548ad14a306d",
+    "displayName": "agent:djy_ceo:cron:f64bf8f5-ad33-45b0-9b5f-16047be87241:run:f60b8e26-a650-4138-9bbe-548ad14a306d",
     "channel": "unknown",
-    "updatedAt": 1773063262184,
+    "updatedAt": 1773320411353,
+    "model": "claude-sonnet-4-6-thinking"
+  },
+  {
+    "key": "agent:djy_build:cron:e257807d-9dfa-43dd-acb1-5147e6e2b20d:run:b53d3729-8250-497e-b425-aa1c57b4c1aa",
+    "displayName": "agent:djy_build:cron:e257807d-9dfa-43dd-acb1-5147e6e2b20d:run:b53d3729-8250-497e-b425-aa1c57b4c1aa",
+    "channel": "unknown",
+    "updatedAt": 1773320221901,
     "model": "gpt-5.4"
   },
   {
-    "key": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:fd490965-58d4-41c8-8e7c-825013b59b27",
-    "displayName": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:fd490965-58d4-41c8-8e7c-825013b59b27",
+    "key": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:ccb269e2-525b-43f0-b1dc-558dad4ca0c4",
+    "displayName": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:ccb269e2-525b-43f0-b1dc-558dad4ca0c4",
     "channel": "unknown",
-    "updatedAt": 1773062400007,
+    "updatedAt": 1773316977075,
     "model": "claude-sonnet-4-6-thinking"
   },
   {
-    "key": "agent:djy_ceo:cron:f64bf8f5-ad33-45b0-9b5f-16047be87241:run:ca0e829a-8209-4530-81d3-5f2f98bf6ae4",
-    "displayName": "agent:djy_ceo:cron:f64bf8f5-ad33-45b0-9b5f-16047be87241:run:ca0e829a-8209-4530-81d3-5f2f98bf6ae4",
+    "key": "agent:djy_build:cron:e257807d-9dfa-43dd-acb1-5147e6e2b20d:run:92225dd2-e9d9-4beb-a003-ad9c72ee2625",
+    "displayName": "agent:djy_build:cron:e257807d-9dfa-43dd-acb1-5147e6e2b20d:run:92225dd2-e9d9-4beb-a003-ad9c72ee2625",
     "channel": "unknown",
-    "updatedAt": 1773061200014,
+    "updatedAt": 1773316621894,
+    "model": "gpt-5.4"
+  },
+  {
+    "key": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:35881505-d50c-473d-b30a-cbdf48bffe4b",
+    "displayName": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:35881505-d50c-473d-b30a-cbdf48bffe4b",
+    "channel": "unknown",
+    "updatedAt": 1773313377074,
     "model": "claude-sonnet-4-6-thinking"
   },
   {
-    "key": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:01ce9bf6-f05e-489c-b73e-eeb82708fe03",
-    "displayName": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:01ce9bf6-f05e-489c-b73e-eeb82708fe03",
+    "key": "agent:djy_build:cron:e257807d-9dfa-43dd-acb1-5147e6e2b20d:run:3c8828a7-5e98-4ca6-88c4-7fe21d8d529c",
+    "displayName": "agent:djy_build:cron:e257807d-9dfa-43dd-acb1-5147e6e2b20d:run:3c8828a7-5e98-4ca6-88c4-7fe21d8d529c",
     "channel": "unknown",
-    "updatedAt": 1773060600007,
+    "updatedAt": 1773313021888,
+    "model": "gpt-5.4"
+  },
+  {
+    "key": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:0e149ea4-4efc-414e-b5f0-f86b57a111ad",
+    "displayName": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:0e149ea4-4efc-414e-b5f0-f86b57a111ad",
+    "channel": "unknown",
+    "updatedAt": 1773309777074,
     "model": "claude-sonnet-4-6-thinking"
   },
   {
-    "key": "agent:djy_ceo:cron:c15683dd-a08c-4db8-9b22-c86d03c98246:run:d459e622-65dc-4905-8932-0a8945d7ffb3",
-    "displayName": "agent:djy_ceo:cron:c15683dd-a08c-4db8-9b22-c86d03c98246:run:d459e622-65dc-4905-8932-0a8945d7ffb3",
+    "key": "agent:djy_build:cron:e257807d-9dfa-43dd-acb1-5147e6e2b20d:run:daae04ea-270b-4880-84ed-08bfca22584d",
+    "displayName": "agent:djy_build:cron:e257807d-9dfa-43dd-acb1-5147e6e2b20d:run:daae04ea-270b-4880-84ed-08bfca22584d",
     "channel": "unknown",
-    "updatedAt": 1773059700007,
+    "updatedAt": 1773309421886,
+    "model": "gpt-5.4"
+  },
+  {
+    "key": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:9715bc63-f372-4aba-b384-1fee9754a4d8",
+    "displayName": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:9715bc63-f372-4aba-b384-1fee9754a4d8",
+    "channel": "unknown",
+    "updatedAt": 1773306191157,
     "model": "claude-sonnet-4-6-thinking"
   },
   {
-    "key": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:8ab603ff-1762-4805-a3f3-bc68d4ba9517",
-    "displayName": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:8ab603ff-1762-4805-a3f3-bc68d4ba9517",
+    "key": "agent:djy_ceo:cron:f64bf8f5-ad33-45b0-9b5f-16047be87241:run:8019606e-823a-442c-8dd6-bc1b22320b63",
+    "displayName": "agent:djy_ceo:cron:f64bf8f5-ad33-45b0-9b5f-16047be87241:run:8019606e-823a-442c-8dd6-bc1b22320b63",
     "channel": "unknown",
-    "updatedAt": 1773058800007,
+    "updatedAt": 1773306073334,
     "model": "claude-sonnet-4-6-thinking"
+  },
+  {
+    "key": "agent:djy_ceo:cron:c15683dd-a08c-4db8-9b22-c86d03c98246:run:20a84062-8e64-48f2-96c4-ab3b2a63aa5b",
+    "displayName": "agent:djy_ceo:cron:c15683dd-a08c-4db8-9b22-c86d03c98246:run:20a84062-8e64-48f2-96c4-ab3b2a63aa5b",
+    "channel": "unknown",
+    "updatedAt": 1773306008335,
+    "model": "claude-sonnet-4-6-thinking"
+  },
+  {
+    "key": "agent:djy_build:cron:e257807d-9dfa-43dd-acb1-5147e6e2b20d:run:482234e0-b55f-49ff-9f19-ee22050e4d10",
+    "displayName": "agent:djy_build:cron:e257807d-9dfa-43dd-acb1-5147e6e2b20d:run:482234e0-b55f-49ff-9f19-ee22050e4d10",
+    "channel": "unknown",
+    "updatedAt": 1773305821875,
+    "model": "gpt-5.4"
+  },
+  {
+    "key": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:3f431a19-0e94-4f37-bad7-d42d62df840b",
+    "displayName": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:3f431a19-0e94-4f37-bad7-d42d62df840b",
+    "channel": "unknown",
+    "updatedAt": 1773302577074,
+    "model": "claude-sonnet-4-6-thinking"
+  },
+  {
+    "key": "agent:djy_build:cron:e257807d-9dfa-43dd-acb1-5147e6e2b20d:run:d6c9000c-07cf-40a7-9b4d-2b7bf71545b6",
+    "displayName": "agent:djy_build:cron:e257807d-9dfa-43dd-acb1-5147e6e2b20d:run:d6c9000c-07cf-40a7-9b4d-2b7bf71545b6",
+    "channel": "unknown",
+    "updatedAt": 1773302221868,
+    "model": "gpt-5.4"
+  },
+  {
+    "key": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:ecd4fdfd-e6fc-4ecf-aafe-2a5700e84e7f",
+    "displayName": "agent:djy_ceo:cron:53948363-1e9d-4c4f-a1fb-2fd137d86104:run:ecd4fdfd-e6fc-4ecf-aafe-2a5700e84e7f",
+    "channel": "unknown",
+    "updatedAt": 1773298977075,
+    "model": "claude-sonnet-4-6-thinking"
+  },
+  {
+    "key": "agent:djy_build:cron:e257807d-9dfa-43dd-acb1-5147e6e2b20d:run:c010a5da-1048-4b68-be27-3fcb1a1e1f63",
+    "displayName": "agent:djy_build:cron:e257807d-9dfa-43dd-acb1-5147e6e2b20d:run:c010a5da-1048-4b68-be27-3fcb1a1e1f63",
+    "channel": "unknown",
+    "updatedAt": 1773298621863,
+    "model": "gpt-5.4"
   }
 ]

@@ -46,6 +46,32 @@ Related modules:
 - Export log
 - Runtime state
 - Auto sync loop on server start
+- **Alert rules and notifications**
+  - Cost limit alerts
+  - Error rate alerts
+  - Cron failure alerts
+  - Telegram notifications
+  - Feishu webhook notifications
+  - Alert history tracking
+- **Cost analysis and optimization**
+  - Cost breakdown by agent/cron/session/model
+  - Daily/weekly/monthly cost tracking
+  - Cost trend visualization
+  - Cost optimization recommendations
+  - Historical cost comparison
+- **Multi-environment support**
+  - Environment configuration management
+  - Local and remote environment sync
+  - Cross-environment comparison
+  - Environment data isolation
+  - Batch sync for multiple environments
+- **Search and filtering** (NEW)
+  - Full-text search
+  - Regular expression search
+  - Time range filtering (today/yesterday/week/month/custom)
+  - Status filtering (success/failed/running/pending)
+  - Type filtering (cron/session/error/alert)
+  - Reusable filter component
 
 ### Quick start
 ```bash

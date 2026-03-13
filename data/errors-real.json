@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-10T12:03:27.215Z",
+  "generatedAt": "2026-03-13T06:25:34.502Z",
   "summary": {
     "errorCount": 1,
     "okCount": 6,
@@ -7,12 +7,12 @@
   },
   "jobs": [
     {
-      "id": "c15683dd-a08c-4db8-9b22-c86d03c98246",
-      "name": "ceo-ledger-gate",
+      "id": "e257807d-9dfa-43dd-acb1-5147e6e2b20d",
+      "name": "openclaw-ecosystem-hourly-business-ideation",
       "enabled": true,
-      "schedule": "0 9,17 * * * Asia/Shanghai",
+      "schedule": "every 3600000ms",
       "lastStatus": "error",
-      "nextRunAtMs": 1773190800000
+      "nextRunAtMs": 1773385022006
     }
   ]
 }

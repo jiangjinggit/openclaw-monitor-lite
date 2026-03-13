@@ -19,6 +19,12 @@ const syncLogPath = path.join(__dirname, 'data', 'sync-log.json');
 const configPath = path.join(__dirname, 'data', 'config.json');
 const runtimePath = path.join(__dirname, 'data', 'runtime.json');
 const exportLogPath = path.join(__dirname, 'data', 'export-log.json');
+const alertRulesPath = path.join(__dirname, 'data', 'alert-rules.json');
+const alertHistoryPath = path.join(__dirname, 'data', 'alert-history.json');
+const notificationConfigPath = path.join(__dirname, 'data', 'notification-config.json');
+const costBreakdownPath = path.join(__dirname, 'data', 'cost-breakdown.json');
+const costTrendsPath = path.join(__dirname, 'data', 'cost-trends.json');
+const environmentsPath = path.join(__dirname, 'data', 'environments.json');
 
 const types = {
   '.html': 'text/html; charset=utf-8',
@@ -113,6 +119,148 @@ http.createServer((req, res) => {
 
   if (url.pathname === '/api/export-log') {
     return serveFile(res, exportLogPath);
+  }
+
+  if (url.pathname === '/api/alert-rules') {
+    if (req.method === 'GET') {
+      return serveFile(res, alertRulesPath);
+    }
+    if (req.method === 'POST') {
+      let body = '';
+      req.on('data', chunk => body += chunk);
+      req.on('end', () => {
+        try {
+          const data = JSON.parse(body);
+          fs.writeFileSync(alertRulesPath, JSON.stringify(data, null, 2));
+          return send(res, 200, JSON.stringify({ ok: true }), 'application/json; charset=utf-8');
+        } catch (err) {
+          return send(res, 400, JSON.stringify({ ok: false, error: err.message }), 'application/json; charset=utf-8');
+        }
+      });
+      return;
+    }
+  }
+
+  if (url.pathname === '/api/alert-history') {
+    return serveFile(res, alertHistoryPath);
+  }
+
+  if (url.pathname === '/api/notification-config') {
+    if (req.method === 'GET') {
+      return serveFile(res, notificationConfigPath);
+    }
+    if (req.method === 'POST') {
+      let body = '';
+      req.on('data', chunk => body += chunk);
+      req.on('end', () => {
+        try {
+          const data = JSON.parse(body);
+          fs.writeFileSync(notificationConfigPath, JSON.stringify(data, null, 2));
+          return send(res, 200, JSON.stringify({ ok: true }), 'application/json; charset=utf-8');
+        } catch (err) {
+          return send(res, 400, JSON.stringify({ ok: false, error: err.message }), 'application/json; charset=utf-8');
+        }
+      });
+      return;
+    }
+  }
+
+  if (url.pathname === '/api/check-alerts' && req.method === 'POST') {
+    execFile('node', [path.join(__dirname, 'scripts', 'check-alerts.js')], (err, stdout, stderr) => {
+      if (err) return send(res, 500, JSON.stringify({ ok: false, error: stderr || err.message }), 'application/json; charset=utf-8');
+      return send(res, 200, JSON.stringify({ ok: true, output: stdout.trim() }), 'application/json; charset=utf-8');
+    });
+    return;
+  }
+
+  if (url.pathname === '/api/test-notification' && req.method === 'POST') {
+    let body = '';
+    req.on('data', chunk => body += chunk);
+    req.on('end', () => {
+      try {
+        const { channel, message } = JSON.parse(body);
+        const { sendNotification } = require('./scripts/check-alerts.js');
+        sendNotification([channel], message || '测试通知').then(success => {
+          return send(res, 200, JSON.stringify({ ok: success }), 'application/json; charset=utf-8');
+        }).catch(err => {
+          return send(res, 500, JSON.stringify({ ok: false, error: err.message }), 'application/json; charset=utf-8');
+        });
+      } catch (err) {
+        return send(res, 400, JSON.stringify({ ok: false, error: err.message }), 'application/json; charset=utf-8');
+      }
+    });
+    return;
+  }
+
+  if (url.pathname === '/api/cost-breakdown') {
+    return serveFile(res, costBreakdownPath);
+  }
+
+  if (url.pathname === '/api/cost-trends') {
+    return serveFile(res, costTrendsPath);
+  }
+
+  if (url.pathname === '/api/analyze-cost' && req.method === 'POST') {
+    execFile('node', [path.join(__dirname, 'scripts', 'analyze-cost.js')], (err, stdout, stderr) => {
+      if (err) return send(res, 500, JSON.stringify({ ok: false, error: stderr || err.message }), 'application/json; charset=utf-8');
+      return send(res, 200, JSON.stringify({ ok: true, output: stdout.trim() }), 'application/json; charset=utf-8');
+    });
+    return;
+  }
+
+  if (url.pathname === '/api/environments') {
+    if (req.method === 'GET') {
+      return serveFile(res, environmentsPath);
+    }
+    if (req.method === 'POST') {
+      let body = '';
+      req.on('data', chunk => body += chunk);
+      req.on('end', () => {
+        try {
+          const data = JSON.parse(body);
+          fs.writeFileSync(environmentsPath, JSON.stringify(data, null, 2));
+          return send(res, 200, JSON.stringify({ ok: true }), 'application/json; charset=utf-8');
+        } catch (err) {
+          return send(res, 400, JSON.stringify({ ok: false, error: err.message }), 'application/json; charset=utf-8');
+        }
+      });
+      return;
+    }
+  }
+
+  if (url.pathname === '/api/sync-multi-env' && req.method === 'POST') {
+    execFile('node', [path.join(__dirname, 'scripts', 'sync-multi-env.js'), 'sync'], (err, stdout, stderr) => {
+      if (err) return send(res, 500, JSON.stringify({ ok: false, error: stderr || err.message }), 'application/json; charset=utf-8');
+      return send(res, 200, JSON.stringify({ ok: true, output: stdout.trim() }), 'application/json; charset=utf-8');
+    });
+    return;
+  }
+
+  if (url.pathname === '/api/compare-environments' && req.method === 'POST') {
+    let body = '';
+    req.on('data', chunk => body += chunk);
+    req.on('end', () => {
+      try {
+        const { envIds } = JSON.parse(body);
+        const { compareEnvironments } = require('./scripts/sync-multi-env.js');
+        const comparison = compareEnvironments(envIds);
+        return send(res, 200, JSON.stringify(comparison), 'application/json; charset=utf-8');
+      } catch (err) {
+        return send(res, 400, JSON.stringify({ ok: false, error: err.message }), 'application/json; charset=utf-8');
+      }
+    });
+    return;
+  }
+
+  if (url.pathname === '/api/env-data' && req.method === 'GET') {
+    const envId = url.searchParams.get('envId') || 'local';
+    try {
+      const { getEnvData } = require('./scripts/sync-multi-env.js');
+      const data = getEnvData(envId);
+      return send(res, 200, JSON.stringify(data), 'application/json; charset=utf-8');
+    } catch (err) {
+      return send(res, 404, JSON.stringify({ ok: false, error: err.message }), 'application/json; charset=utf-8');
+    }
   }
 
   if (url.pathname === '/api/export' && req.method === 'POST') {

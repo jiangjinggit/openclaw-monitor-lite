@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>成本分析 - OpenClaw Monitor Lite</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .cost-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .section {
+      background: white;
+      border-radius: 8px;
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    .section-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      color: #1a1a1a;
+    }
+
+    .cost-summary {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .cost-card {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+    }
+
+    .cost-card-label {
+      font-size: 14px;
+      opacity: 0.9;
+      margin-bottom: 8px;
+    }
+
+    .cost-card-value {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .cost-card-change {
+      font-size: 12px;
+      opacity: 0.8;
+    }
+
+    .breakdown-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .breakdown-card {
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 16px;
+    }
+
+    .breakdown-title {
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: #374151;
+    }
+
+    .breakdown-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0;
+      border-bottom: 1px solid #f3f4f6;
+    }
+
+    .breakdown-item:last-child {
+      border-bottom: none;
+    }
+
+    .breakdown-name {
+      font-size: 14px;
+      color: #1a1a1a;
+      flex: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .breakdown-value {
+      font-weight: 600;
+      color: #3b82f6;
+      margin-left: 12px;
+    }
+
+    .breakdown-bar {
+      height: 4px;
+      background: #e5e7eb;
+      border-radius: 2px;
+      margin-top: 4px;
+      overflow: hidden;
+    }
+
+    .breakdown-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+      transition: width 0.3s;
+    }
+
+    .chart-container {
+      height: 300px;
+      margin-top: 16px;
+    }
+
+    .recommendations {
+      display: grid;
+      gap: 12px;
+    }
+
+    .recommendation-card {
+      border-left: 4px solid;
+      padding: 16px;
+      background: #f9fafb;
+      border-radius: 4px;
+    }
+
+    .recommendation-card.success {
+      border-color: #10b981;
+      background: #f0fdf4;
+    }
+
+    .recommendation-card.warning {
+      border-color: #f59e0b;
+      background: #fffbeb;
+    }
+
+    .recommendation-card.info {
+      border-color: #3b82f6;
+      background: #eff6ff;
+    }
+
+    .recommendation-title {
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #1a1a1a;
+    }
+
+    .recommendation-description {
+      font-size: 14px;
+      color: #6b7280;
+      margin-bottom: 8px;
+    }
+
+    .recommendation-suggestion {
+      font-size: 14px;
+      color: #374151;
+      font-style: italic;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background: #3b82f6;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #2563eb;
+    }
+
+    .btn-secondary {
+      background: #f3f4f6;
+      color: #374151;
+    }
+
+    .btn-secondary:hover {
+      background: #e5e7eb;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 40px;
+      color: #6b7280;
+    }
+
+    .period-tabs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 16px;
+      border-bottom: 2px solid #e5e7eb;
+    }
+
+    .period-tab {
+      padding: 8px 16px;
+      border: none;
+      background: none;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      color: #6b7280;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -2px;
+      transition: all 0.2s;
+    }
+
+    .period-tab.active {
+      color: #3b82f6;
+      border-bottom-color: #3b82f6;
+    }
+
+    .period-tab:hover {
+      color: #1a1a1a;
+    }
+  </style>
+</head>
+<body>
+  <div class="cost-container">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+      <h1 style="margin: 0;">成本分析</h1>
+      <div style="display: flex; gap: 12px;">
+        <button class="btn btn-primary" onclick="analyzeCost()">刷新分析</button>
+        <a href="/" class="btn btn-secondary" style="text-decoration: none; display: inline-flex; align-items: center;">返回首页</a>
+      </div>
+    </div>
+
+    <!-- 成本概览 -->
+    <div class="cost-summary">
+      <div class="cost-card">
+        <div class="cost-card-label">今日成本</div>
+        <div class="cost-card-value" id="daily-cost">¥0.00</div>
+        <div class="cost-card-change" id="daily-change">-</div>
+      </div>
+      <div class="cost-card" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+        <div class="cost-card-label">本周成本</div>
+        <div class="cost-card-value" id="weekly-cost">¥0.00</div>
+        <div class="cost-card-change" id="weekly-change">周平均: ¥0.00</div>
+      </div>
+      <div class="cost-card" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+        <div class="cost-card-label">本月成本</div>
+        <div class="cost-card-value" id="monthly-cost">¥0.00</div>
+        <div class="cost-card-change" id="monthly-change">月平均: ¥0.00</div>
+      </div>
+    </div>
+
+    <!-- 成本分解 -->
+    <div class="section">
+      <div class="section-title">成本分解</div>
+      
+      <div class="period-tabs">
+        <button class="period-tab active" onclick="switchPeriod('daily')">今日</button>
+        <button class="period-tab" onclick="switchPeriod('weekly')">本周</button>
+        <button class="period-tab" onclick="switchPeriod('monthly')">本月</button>
+      </div>
+
+      <div class="breakdown-grid" id="breakdown-container"></div>
+    </div>
+
+    <!-- 成本趋势 -->
+    <div class="section">
+      <div class="section-title">成本趋势</div>
+      <div class="chart-container" id="trend-chart">
+        <canvas id="trendCanvas"></canvas>
+      </div>
+    </div>
+
+    <!-- 优化建议 -->
+    <div class="section">
+      <div class="section-title">优化建议</div>
+      <div class="recommendations" id="recommendations-container"></div>
+    </div>
+  </div>
+
+  <script>
+    let breakdown = null;
+    let trends = null;
+    let currentPeriod = 'daily';
+
+    async function loadData() {
+      try {
+        const [breakdownRes, trendsRes] = await Promise.all([
+          fetch('/api/cost-breakdown'),
+          fetch('/api/cost-trends')
+        ]);
+
+        breakdown = await breakdownRes.json();
+        trends = await trendsRes.json();
+
+        renderSummary();
+        renderBreakdown();
+        renderTrends();
+        renderRecommendations();
+      } catch (err) {
+        console.error('Failed to load data:', err);
+      }
+    }
+
+    function renderSummary() {
+      if (!breakdown) return;
+
+      document.getElementById('daily-cost').textContent = `¥${breakdown.daily.total.toFixed(2)}`;
+      document.getElementById('weekly-cost').textContent = `¥${breakdown.weekly.total.toFixed(2)}`;
+      document.getElementById('monthly-cost').textContent = `¥${breakdown.monthly.total.toFixed(2)}`;
+
+      const weeklyAvg = breakdown.weekly.total / 7;
+      const monthlyAvg = breakdown.monthly.total / 30;
+
+      document.getElementById('weekly-change').textContent = `周平均: ¥${weeklyAvg.toFixed(2)}`;
+      document.getElementById('monthly-change').textContent = `月平均: ¥${monthlyAvg.toFixed(2)}`;
+
+      // 计算日变化
+      if (trends && trends.daily && trends.daily.length > 1) {
+        const yesterday = trends.daily[trends.daily.length - 2];
+        const change = breakdown.daily.total - yesterday.total;
+        const changePercent = yesterday.total > 0 ? (change / yesterday.total * 100).toFixed(1) : 0;
+        const arrow = change > 0 ? '↑' : change < 0 ? '↓' : '→';
+        document.getElementById('daily-change').textContent = `${arrow} ${changePercent}% vs 昨日`;
+      }
+    }
+
+    function renderBreakdown() {
+      if (!breakdown) return;
+
+      const container = document.getElementById('breakdown-container');
+      const period = breakdown[currentPeriod];
+
+      if (!period) {
+        container.innerHTML = '<div class="empty-state">暂无数据</div>';
+        return;
+      }
+
+      const sections = [
+        { title: '按 Agent', data: period.byAgent },
+        { title: '按 Cron', data: period.byCron },
+        { title: '按模型', data: period.byModel }
+      ];
+
+      container.innerHTML = sections.map(section => {
+        const entries = Object.entries(section.data).sort((a, b) => b[1] - a[1]);
+        const maxValue = entries.length > 0 ? entries[0][1] : 1;
+
+        if (entries.length === 0) {
+          return `
+            <div class="breakdown-card">
+              <div class="breakdown-title">${section.title}</div>
+              <div class="empty-state" style="padding: 20px;">暂无数据</div>
+            </div>
+          `;
+        }
+
+        return `
+          <div class="breakdown-card">
+            <div class="breakdown-title">${section.title}</div>
+            ${entries.map(([name, value]) => `
+              <div class="breakdown-item">
+                <div class="breakdown-name" title="${name}">${name}</div>
+                <div class="breakdown-value">¥${value.toFixed(2)}</div>
+              </div>
+              <div class="breakdown-bar">
+                <div class="breakdown-bar-fill" style="width: ${(value / maxValue * 100).toFixed(1)}%"></div>
+              </div>
+            `).join('')}
+          </div>
+        `;
+      }).join('');
+    }
+
+    function renderTrends() {
+      if (!trends || !trends.daily || trends.daily.length === 0) {
+        document.getElementById('trend-chart').innerHTML = '<div class="empty-state">暂无趋势数据</div>';
+        return;
+      }
+
+      const canvas = document.getElementById('trendCanvas');
+      const ctx = canvas.getContext('2d');
+      
+      // 设置 canvas 尺寸
+      canvas.width = canvas.parentElement.clientWidth;
+      canvas.height = 300;
+
+      const data = trends.daily.slice(-14); // 最近 14 天
+      const maxValue = Math.max(...data.map(d => d.total), 1);
+      const padding = 40;
+      const chartWidth = canvas.width - padding * 2;
+      const chartHeight = canvas.height - padding * 2;
+
+      // 清空画布
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // 绘制网格线
+      ctx.strokeStyle = '#e5e7eb';
+      ctx.lineWidth = 1;
+      for (let i = 0; i <= 5; i++) {
+        const y = padding + (chartHeight / 5) * i;
+        ctx.beginPath();
+        ctx.moveTo(padding, y);
+        ctx.lineTo(canvas.width - padding, y);
+        ctx.stroke();
+      }
+
+      // 绘制折线
+      ctx.strokeStyle = '#3b82f6';
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+
+      data.forEach((d, i) => {
+        const x = padding + (chartWidth / (data.length - 1)) * i;
+        const y = padding + chartHeight - (d.total / maxValue * chartHeight);
+        
+        if (i === 0) {
+          ctx.moveTo(x, y);
+        } else {
+          ctx.lineTo(x, y);
+        }
+      });
+
+      ctx.stroke();
+
+      // 绘制数据点
+      ctx.fillStyle = '#3b82f6';
+      data.forEach((d, i) => {
+        const x = padding + (chartWidth / (data.length - 1)) * i;
+        const y = padding + chartHeight - (d.total / maxValue * chartHeight);
+        
+        ctx.beginPath();
+        ctx.arc(x, y, 4, 0, Math.PI * 2);
+        ctx.fill();
+      });
+
+      // 绘制 X 轴标签
+      ctx.fillStyle = '#6b7280';
+      ctx.font = '12px sans-serif';
+      ctx.textAlign = 'center';
+      data.forEach((d, i) => {
+        if (i % 2 === 0) { // 只显示偶数索引的标签
+          const x = padding + (chartWidth / (data.length - 1)) * i;
+          const label = d.date.substring(5); // MM-DD
+          ctx.fillText(label, x, canvas.height - 10);
+        }
+      });
+
+      // 绘制 Y 轴标签
+      ctx.textAlign = 'right';
+      for (let i = 0; i <= 5; i++) {
+        const y = padding + (chartHeight / 5) * i;
+        const value = maxValue * (1 - i / 5);
+        ctx.fillText(`¥${value.toFixed(0)}`, padding - 10, y + 4);
+      }
+    }
+
+    function renderRecommendations() {
+      if (!breakdown || !breakdown.recommendations) return;
+
+      const container = document.getElementById('recommendations-container');
+      
+      if (breakdown.recommendations.length === 0) {
+        container.innerHTML = '<div class="empty-state">暂无建议</div>';
+        return;
+      }
+
+      container.innerHTML = breakdown.recommendations.map(rec => `
+        <div class="recommendation-card ${rec.severity}">
+          <div class="recommendation-title">${rec.title}</div>
+          <div class="recommendation-description">${rec.description}</div>
+          <div class="recommendation-suggestion">💡 ${rec.suggestion}</div>
+        </div>
+      `).join('');
+    }
+
+    function switchPeriod(period) {
+      currentPeriod = period;
+      
+      // 更新标签状态
+      document.querySelectorAll('.period-tab').forEach(tab => {
+        tab.classList.remove('active');
+      });
+      event.target.classList.add('active');
+      
+      renderBreakdown();
+    }
+
+    async function analyzeCost() {
+      try {
+        const res = await fetch('/api/analyze-cost', { method: 'POST' });
+        const data = await res.json();
+        
+        if (data.ok) {
+          await loadData();
+        } else {
+          alert('分析失败: ' + (data.error || '未知错误'));
+        }
+      } catch (err) {
+        alert('分析失败: ' + err.message);
+      }
+    }
+
+    // 初始加载
+    loadData();
+
+    // 定期刷新
+    setInterval(loadData, 60000);
+  </script>
+</body>
+</html>
